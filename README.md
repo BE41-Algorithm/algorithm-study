@@ -26,7 +26,8 @@
 - 브렌치명 : [feat][이름]
   - 예시) feat/psh
   
-### 커밋 및 푸시
+### 커밋 메시지와 PR 방법
+- 커밋 메시지 : Title: 귤 고르기, Time: 66.54 ms, Memory: 110 MB
 - Feature 브렌치에서 main으로 PR
 - Fork해서 PR
 - 알잘딱깔센
@@ -38,7 +39,6 @@
 
 ### 문제 코드 작성
 - 백준 허브의 결과 내용 올리기!
-- 커밋 메시지 : Title: 귤 고르기, Time: 66.54 ms, Memory: 110 MB
 - 코드 내용에 주석으로 설명 남기기!
 ```Java
 public class Psh {
