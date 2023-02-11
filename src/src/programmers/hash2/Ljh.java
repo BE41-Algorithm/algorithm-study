@@ -1,6 +1,7 @@
 package src.programmers.hash2;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /*
  * Level 1 : 완주하지 못한 선수
@@ -23,6 +24,21 @@ public class Ljh {
     }
     public String solution(String[] participant, String[] completion) {
 
+        // 방법 1). groupingBy를 이용한 카운팅
+        // 참가자를 카운팅으로 그룹핑 시켜 Map으로 반환
+        Map<String, Long> hashMap = Arrays.stream(participant)
+                .collect(Collectors.groupingBy(person -> person, Collectors.counting()));
+
+        // 완주자 목록으로 참가자를 비교해 Map에서 제거하기
+        Arrays.stream(completion)
+                .forEach(person -> {
+                            if (hashMap.get(person) == 1L) hashMap.remove(person);
+                            else hashMap.put(person, hashMap.get(person) - 1);
+                        });
+        return hashMap.keySet().iterator().next();
+
+        // 방법 2). getOrDefault를 이용한 카운팅
+        /*
         String answer = "";
         Map<String, Integer> hashMap = new HashMap<>();
 
@@ -41,5 +57,6 @@ public class Ljh {
             }
         }
         return answer;
+        */
     }
 }
