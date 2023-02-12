@@ -3,7 +3,7 @@ package src.programmers.hash2;
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution {
+class Chanbin {
     public String solution(String[] participant, String[] completion) {
         /**
          * 1. 단 한 명만 마라톤을 완주하지 못합니다.
