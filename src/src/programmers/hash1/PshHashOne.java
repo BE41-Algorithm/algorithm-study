@@ -1,4 +1,4 @@
-package src.example.hash1;
+package src.programmers.hash1;
 
 import java.util.Arrays;
 

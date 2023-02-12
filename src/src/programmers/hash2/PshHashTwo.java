@@ -1,4 +1,4 @@
-package src.example.hash2;
+package src.programmers.hash2;
 
 import java.util.HashMap;
 
