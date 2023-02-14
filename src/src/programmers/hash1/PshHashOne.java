@@ -12,6 +12,8 @@ public class PshHashOne {
             hashSet.add(nums[i]);
         }
 
+
+
         // 둘 중 작은 것이 최대 종류
         return Math.min(hashSet.size(), nums.length / 2);
     }
