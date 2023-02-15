@@ -25,7 +25,6 @@ class Chanbin {
                 answer = entry.getKey();
             }
         }
-
         return answer;
     }
 }
