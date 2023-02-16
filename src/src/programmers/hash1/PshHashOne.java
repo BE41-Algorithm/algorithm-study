@@ -1,8 +1,8 @@
-package src.example.ex1;
+package src.programmers.hash1;
 
 import java.util.HashSet;
 
-public class Psh {
+public class PshHashOne {
     public int solution(int[] nums) {
         // hashSet 생성
         HashSet<Integer> hashSet = new HashSet<>();
@@ -11,6 +11,8 @@ public class Psh {
         for (int i = 0; i < nums.length; i++) {
             hashSet.add(nums[i]);
         }
+
+
 
         // 둘 중 작은 것이 최대 종류
         return Math.min(hashSet.size(), nums.length / 2);
