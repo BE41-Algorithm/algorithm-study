@@ -3,7 +3,7 @@ package src.programmers.stackqueue4;
 import java.util.*;
 
 /*
-* LEVEL 1 스택/큐 : 같은 숫자는 싫어
+* LEVEL 2 스택/큐 : 프린터
 * */
 public class JaeHyeok {
     public static void main(String[] args) {
