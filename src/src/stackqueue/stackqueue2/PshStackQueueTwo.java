@@ -1,4 +1,4 @@
-package src.stackqueue.stackqueue1;
+package src.stackqueue.stackqueue2;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
