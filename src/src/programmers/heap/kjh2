@@ -17,19 +17,19 @@ class Solution {
         for(int i=0; i<jobs.length; i++){
             q.add(jobs[i]);
         }
+//         int[] now = q.poll();
+//         answer+= now[1];
+//         end += (now[1] + now[0]);
         int[] now = new int[2];
-        //int[] now = q.poll();
-        //answer+= now[1];
-        //end += (now[1] + now[0]);
-        
         while(q.size() >0){
             if(readyQ.isEmpty()){
-                
+                //마지막 작업시간보다 늦게 시작되는 경우
                 if (q.peek()[0] > end ){
                     now = q.poll();
                     answer+= now[1];
                     end = (now[1] + now[0]);
                     }
+                //마지막 작업 시간 전에 시작되는 경우
                 while(q.peek()!= null ){
                     if(q.peek()[0] <= end){
                         readyQ.add(q.poll());
@@ -38,18 +38,12 @@ class Solution {
                 }
                 
             }
-    
+                //대기하고 있던 작업들 처리
                 while(!readyQ.isEmpty()){
-                    
                     now = readyQ.poll();
-                    //바로 실행되지 않는 경우
-                    if(end < now[0]){
-                        answer+= now[1];
-                    }
-                    else{
-                        answer += (end - now[0] + now[1]);
-                    }
+                    answer += (end - now[0] + now[1]);
                     end += now[1];
+                    //현 작업이 진행되고 있던 사이 대기하는 작업들 있나 확인
                     while(q.peek()!= null ){
                     if(q.peek()[0]<= end){
                         readyQ.add(q.poll());
