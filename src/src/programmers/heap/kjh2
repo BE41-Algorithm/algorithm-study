@@ -17,6 +17,7 @@ class Solution {
         for(int i=0; i<jobs.length; i++){
             q.add(jobs[i]);
         }
+        int[] now = new int[2];
         //int[] now = q.poll();
         //answer+= now[1];
         //end += (now[1] + now[0]);
