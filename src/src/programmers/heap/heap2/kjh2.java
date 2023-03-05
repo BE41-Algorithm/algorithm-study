@@ -1,5 +1,8 @@
+package src.programmers.heap.heap2;
+
 import java.util.*;
-class Solution {
+
+public class kjh2 {
     public int solution(int[][] jobs) {
         //소요시간
         int answer = 0;

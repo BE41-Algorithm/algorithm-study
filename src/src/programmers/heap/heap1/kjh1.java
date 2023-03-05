@@ -1,5 +1,8 @@
+package src.programmers.heap.heap1;
+
 import java.util.*;
-class Solution {
+
+public class kjh1 {
     public int solution(int[] scoville, int K) {
         int answer = 0;
         PriorityQueue<Integer> pq = new PriorityQueue<>();
